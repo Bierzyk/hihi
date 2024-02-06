@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czy zostaniesz moją walentynką?</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header_text">Czy zostaniesz moją walentynką?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJ4ajN5ZzBjZjBsb3Bpb2xraTl5Mmg5MHc3YnZvdHM2NzB5dThmNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sXv0vaA4331Ti/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="takButton" onclick="nextPage()">Tak</button>
+            <button class="btn" id="nieButton" onmouseover="moveButton()" onclick="moveButton()">Nie</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3JvczNjMnp3ZjR6czI0ZTExcG96bTF6NjE5dThxYno5d2p5MmI4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WUq1cg9K7uzHa/giphy-downsized-large.gif";
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('nieButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('nieButton').offsetHeight);
+            document.getElementById('nieButton').style.left = `${x}px`;
+            document.getElementById('nieButton').style.top = `${y}px`;
+        }
+    </script> 
+</body> 
+</html>
